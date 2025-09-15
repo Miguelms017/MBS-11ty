@@ -1,0 +1,119 @@
+@use "../assets/variables" as var;
+@use "../assets/mixins" as m;
+@use "../assets/cgeneric" as g;
+
+.apt{
+    @include m.flex-center-column;
+    &__title{
+        margin: var(--size-2);
+        font-size: var(--size-4);
+    }
+    &__sub{
+        @include m.flex-center;
+        margin: 2.5em;
+        gap:1em;
+        &__hero{
+            font-size: var(--size-2);
+            max-width: 40ch;
+            background-color: var(--pink-primary-100);
+            border-radius: 20px 0 0 20px;
+            &__img{
+                img{
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 20px 0 0 0;
+                }
+            }
+            &__txt{
+                padding: 1.5em;
+            }
+        }
+        &__form{
+            padding: 1em;
+            font-size: var(--size-1);
+            background-color: var(--pink-primary-100);
+            width: 100%;
+            border-radius: 0 20px 20px 0;
+            &__cnt{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                &__input{
+                    padding: 0.5em;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 0.5em;
+                    justify-content: space-between;
+                    label{
+                        white-space: nowrap;
+                    }
+                    input{
+                        width: 100%
+                    }
+                }
+            }
+            &__btn{
+                @include m.flex-center;
+                gap: 1em;
+                .submit{
+                    background-color: var(--cyan-primary-200);
+                    color: var(--black);
+                    border: solid 1px var(--black);
+                    border-radius: 15px;
+                    transition: 0.5s;
+                }
+                .submit:hover{
+                    background-color: var(--cyan-primary-400);
+                    color: var(--white);
+                }
+                .clear{
+                    background-color: var(--pink-primary-200);
+                    color: var(--black);
+                    border: solid 1px var(--black);
+                    border-radius: 15px;
+                    transition: 0.5s;
+                }
+                .clear:hover{
+                    background-color: var(--pink-primary-300);
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:870px) {
+    .apt{
+        margin: 0.2em;
+        &__sub{
+            @include m.flex-center-column;
+            gap: 2.5em;
+            &__hero{
+                max-width: 35ch;
+                border-radius: 20px 20px 0 0;
+                &__img{
+                    img{
+                        border-radius: 20px 20px 0 0;
+                    }
+                }
+            }
+            &__form{
+                max-width: 35ch;
+                font-size: var(--size-2);
+                width: 100%;
+                border-radius: 0 0 20px 20px;
+                &__cnt{
+                    &__input{
+                        #time{
+                            width: 15ch;
+                        }
+                    }
+                    &__desc{
+                        #workDescription{
+                            max-width: 30ch;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

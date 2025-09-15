@@ -1,0 +1,43 @@
+:root{
+    /*primary*/
+    --pink-primary-100: hsl(330, 100%, 95%);
+    --pink-primary-200: hsl(330, 100%, 80%);
+    --pink-primary-300: hsl(330, 100%, 65%);
+    --pink-primary-400: hsl(330, 100%, 40%);
+    --pink-primary-500: hsl(330, 100%, 25%);
+    /*secondary*/
+    --cyan-primary-100: hsl(150, 100%, 95%);
+    --cyan-primary-200: hsl(150, 100%, 80%);
+    --cyan-primary-300: hsl(150, 100%, 65%);
+    --cyan-primary-400: hsl(150, 100%, 40%);
+    --cyan-primary-500: hsl(150, 100%, 25%);
+    /*gray scale*/
+    --black: hsl(0 ,0% ,0%);
+    --gray-100: hsl(0, 0%, 25%);
+    --gray-200: hsl(0, 0%, 50%);
+    --gray-300: hsl(0, 0%, 75%);
+    --white: hsl(0, 100%, 100%);
+
+    /*typographies*/
+    --ff-body: "Charm", serif;
+    --ff-heading: "Inknut", serif;
+    --ff-copyright: "Oswald", sans-serif;
+
+    /*Font Sizes*/
+    --size-1: 1rem;
+    --size-2: 1.25rem;
+    --size-3: 1.5rem;
+    --size-4: 1.75rem;
+    --size-5: 2rem;
+    --heads: 3rem;
+}
+
+@media screen and (min-width: 1040px){
+    :root{
+        --size-1: 1.25rem;
+        --size-2: 1.5rem;
+        --size-3: 1.75rem;
+        --size-4: 2rem;
+        --size-5: 2.25rem;
+    }
+}

@@ -1,0 +1,24 @@
+@use '../assets/variables' as var;
+@use '../assets/mixins' as m;
+@use '../assets/cgeneric' as g;
+
+.access{
+    @include m.flex-center;
+    background-color: var(--pink-primary-100);
+    gap: 3,5rem;
+    &__1{
+        @include g.generic;
+    }
+    &__2{
+        @include g.generic;
+    }
+    &__3{
+        @include g.generic;
+    }
+}
+
+@media screen and (max-width: 870px){
+    .access{
+        @include m.flex-center-column;
+    }
+}

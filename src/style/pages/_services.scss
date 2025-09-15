@@ -1,0 +1,66 @@
+@use "../assets/variables" as var;
+@use "../assets/mixins" as m;
+@use "../assets/cgeneric" as g;
+.srv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 2.5em;
+    gap: 1em;
+}
+#entrance{
+    background-color: var(--cyan-primary-200);
+    font-size: var(--size-2);
+    border-radius: 20px;
+    padding: 2em;
+    max-width: 40ch;
+    h2{
+        font-size: var(--size-4);
+        text-align: center;
+        margin: 1em;
+    }
+}
+#priceTable{
+    border: solid var(--black) 1px;
+    background-color: var(--cyan-primary-400);
+    border-radius: 20px;
+    font-size: var(--size-2);
+    padding: 5px;
+}
+.prices{
+    border: solid var(--black) 1px;
+    border-radius: 15px;
+    width: 100%;
+    background-color: var(--black);
+}
+td, th{
+    border: solid var(--black) 1px;
+}
+tr{
+    background-color: var(--white);
+}
+#odd{
+    background-color: var(--cyan-primary-200);
+}
+#heading{
+    background-color: var(--pink-primary-100);
+}
+.HeadingL{
+    border-radius: 15px 0 0 0;
+}
+.HeadingR{
+    border-radius: 0 15px 0 0;
+}
+#lastR{
+    border-radius: 0 0 15px 0;
+}
+#lastL{
+    border-radius: 0 0 0 15px;
+}
+@media screen and (max-width:1040px) {
+    .srv{
+        flex-direction: column;
+    }
+    
+}

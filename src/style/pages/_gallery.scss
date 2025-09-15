@@ -1,0 +1,80 @@
+@use "../assets/variables" as var;
+@use "../assets/mixins" as m;
+
+#Gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+.galitem{
+    margin: 2.5em;   
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 18.75em;
+    &__img{
+        img{
+            max-width: 18.75em;
+            width: 100%;
+            height: auto;
+            border-radius: 20px 20px 0 0;
+        }
+    }
+    &__desc{
+        padding: 2em;
+        &__heart{
+            width: 20px;
+            height: 20px;
+            margin: 0.75em;
+            position: relative;
+            left: 12em;
+            input[type="checkbox"]{
+                width: 20px;
+                height: 20px;
+                position: relative;
+                top: -2em;
+                left: -0.25em;
+                display: none;
+            }
+            label{
+                cursor: pointer;
+                svg{
+                    fill: var(--cyan-primary-200);
+                    transition: fill 0.3s ease;
+                }
+            }
+            input[type="checkbox"]:checked + label svg {
+                fill: var(--pink-primary-300);
+            }
+        }
+        &__txt{
+            font-size: var(--size-1);
+        }
+    }
+}
+@media screen and (min-width: 1040px) {
+    #Gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .galitem{
+        width: 23.44em;
+        &__img{
+            img{
+                max-width: 23.44em;
+            }
+        }
+        &__desc{
+            &__heart{
+                left: 17.25em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:750px){
+    #Gallery{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

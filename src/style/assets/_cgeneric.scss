@@ -1,0 +1,50 @@
+@use 'variables.scss' as var;
+
+@mixin generic{
+    margin: 1.25em;
+    max-width: 26rem;
+    min-width: 16rem;
+    background: var(--white);
+    color: var(--black);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px 0px var(--gray-100);
+    &__img{
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    &__content{
+        padding: 2rem;
+        padding-bottom: 1.5rem;
+        &__title{
+            font-size: var(--size-4);
+        }
+        &__description{
+            font-size: var(--size-2);
+            color: var(--gray-100);
+        }
+    }
+    &__button{
+        margin: 2rem;
+        padding: 0.3em;
+        background-color: var(--pink-primary-200);
+        color: var(--black);
+        border-radius: 10px;
+        font-size: var(--size-3);
+        a{
+            color: var(--black);
+            text-decoration: none;
+        }
+        a:visited{
+            color: var(--black);
+            text-decoration: none;
+        }
+    }
+    &__button__out{
+        background-color: var(--white);
+        color: var(--black);
+        border: solid 2px var(--pink-primary-200);
+    }
+}

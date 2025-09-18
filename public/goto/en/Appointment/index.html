@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <div class="apt__sub__form">
-                    <form name="Appointment" method="post">
+                    <form name="Appointment" id="appointmentForm">
                         <div class="apt__sub__form__cnt">
                             <div class="apt__sub__form__cnt__input">
                                 <label for="FirstName">First Name*</label>
@@ -71,26 +71,57 @@
                             </div>
                             <div class="apt__sub__form__cnt__input">
                                 <label for="serviceType">Service Type*</label>
-                                <select name="serviceType" size="1">
+                                <select name="serviceType" id="serviceType" size="1">
                                     <option value="menHaircut">Men Haircut</option>
                                     <option value="womenHaircut">Women Haircut</option>
                                     <option value="color">Color</option>
                                     <option value="Highlights">Highlights</option>
                                     <option value="hairBrushing">Hair Brushing</option>
-                                    <option value="waxing">Waxing</option><option>
-                                    </option><option value="manicure">Manicure</option>
+                                    <option value="waxing">Waxing</option>
+                                    <option value="manicure">Manicure</option>
                                     <option value="pedicure">Pedicure</option>
                                 </select>
                             </div>
                             <div class="apt__sub__form__cnt__desc">
                                 <label for="workDescription">description*</label><br>
-                                <textarea id="workDescription" rows="5" cols="45" required=""></textarea>
+                                <textarea name="details" id="workDescription" rows="5" cols="45" required=""></textarea>
                             </div>
                         </div>
                         <div class="apt__sub__form__btn">
                             <input id="submit" class="submit" type="submit" value="submit">
                             <input id="clear" class="clear" type="reset" value="clear">
                         </div>
+                        <script>
+                            document.getElementById('appointmentForm').addEventListener('submit', async (e) => {
+                                e.preventDefault();
+                                const data = {
+                                    Fname: document.getElementById('FirstName').value,
+                                    Lname: document.getElementById('LastName').value,
+                                    phone: document.getElementById('Phone').value,
+                                    email: document.getElementById('email').value,
+                                    date: document.getElementById('Time').value,
+                                    service: document.getElementById('serviceType').value,
+                                    description: document.getElementById('workDescription').value
+                                };
+                                try {
+                                    const response = await fetch('http://localhost:3000/Appts', {
+                                        method: 'POST',
+                                        headers: { 'Content-Type': 'application/json' },
+                                        body: JSON.stringify(data)
+                                    });
+                                    const result = await response.json();
+                                    if(result.success){
+                                        alert("Appointment created successfully!");
+                                        document.getElementById('appointmentForm').reset();
+                                    } else {
+                                        alert("Error saving appointment.");
+                                    }
+                                } catch(err){
+                                    console.error(err);
+                                    alert("Server error.");
+                                }
+                            });
+                        </script>
                     </form>
                 </div>
             </div>

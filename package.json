@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "build": "eleventy",
-    "start": "npm-run-all --parallel sass:watch eleventy:serve",
+    "start": "npm-run-all --parallel doc srvr",
+    "srvr": "node app.js",
+    "doc": "npm-run-all --parallel sass:watch eleventy:serve",
     "sass": "sass src/style/style.scss public/style/style.css",
     "sass:watch": "sass --watch src/style/style.scss:public/style/style.css",
     "eleventy:serve": "eleventy --serve"
@@ -17,5 +19,10 @@
     "@11ty/eleventy": "^3.0.0",
     "npm-run-all": "^4.1.5",
     "sass": "^1.83.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mysql2": "^3.15.0"
   }
 }

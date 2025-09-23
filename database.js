@@ -7,11 +7,11 @@ const pool = mysql.createPool({
     database: 'sql5799052'
 }).promise()
 
-export async function create(Fname, Lname, phone, email, date, service, description) {
+export async function create(Fname, Lname, phone, email, date, hairstylist, service, description) {
     const result = await pool.query(`
-        INSERT INTO Appts (\`First Name\`, \`Last Name\`, \`Phone\`, \`Email\`, \`Date\`, \`Service\`, \`Description\`) 
-        VALUES (?, ?, ?, ?, ?, ?, ?)
-        `, [Fname, Lname, phone, email, date, service, description]
+        INSERT INTO Appts (\`First Name\`, \`Last Name\`, \`Phone\`, \`Email\`, \`Date\`, \`Hairstylist\`, \`Service\`, \`Description\`) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        `, [Fname, Lname, phone, email, date, hairstylist, service, description]
     );
     return result;
 }

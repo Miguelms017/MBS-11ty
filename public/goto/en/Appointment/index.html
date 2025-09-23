@@ -82,6 +82,16 @@
                                     <option value="pedicure">Pedicure</option>
                                 </select>
                             </div>
+                            <div class="apt__sub__form__cnt__input">
+                                <label for="Hairstylist">Hairstylist</label>
+                                <select name="Hairstylist" id="Hairstylist" size="1">
+                                    <option value="any">please choose an option</option>
+                                    <option value="any">any</option>
+                                    <option value="Paco">Paco</option>
+                                    <option value="Maria">Maria</option>
+                                    <option value="Mercedes">Mercedes</option>
+                                </select>
+                            </div>
                             <div class="apt__sub__form__cnt__desc">
                                 <label for="workDescription">description*</label><br>
                                 <textarea name="details" id="workDescription" rows="5" cols="45" required=""></textarea>
@@ -100,6 +110,7 @@
                                     phone: document.getElementById('Phone').value,
                                     email: document.getElementById('email').value,
                                     date: document.getElementById('Time').value,
+                                    hairstylist: document.getElementById('Hairstylist').value,
                                     service: document.getElementById('serviceType').value,
                                     description: document.getElementById('workDescription').value
                                 };

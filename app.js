@@ -12,8 +12,8 @@ app.use(express.json())
 
 app.post('/Appts', async (req, res) => {
     try {
-        const { Fname, Lname, phone, email, date, service, description } = req.body;
-        const apt = await create(Fname, Lname, phone, email, date, service, description)
+        const { Fname, Lname, phone, email, date, hairstylist, service, description } = req.body;
+        const apt = await create(Fname, Lname, phone, email, date, hairstylist, service, description)
         res.status(201).json({
             success: true,
             message: "Appontment saved",

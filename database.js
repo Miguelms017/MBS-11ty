@@ -2,9 +2,9 @@ import mysql from 'mysql2'
 
 const pool = mysql.createPool({
     host: 'sql5.freesqldatabase.com',
-    user: 'sql5799052',
-    password: 'dJJuaNh6Ti',
-    database: 'sql5799052'
+    user: 'sql5799947',
+    password: 'qhgWePf2IG',
+    database: 'sql5799947'
 }).promise()
 
 export async function create(Fname, Lname, phone, email, date, hairstylist, service, description) {

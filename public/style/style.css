@@ -169,6 +169,7 @@ li {
 .loctime__loc__img {
   width: 100%;
   height: auto;
+  min-height: 402px;
   border-radius: 20px 0 0 0;
 }
 .loctime__loc__content {
@@ -253,9 +254,11 @@ footer .copy {
   }
   .loctime__loc__img {
     border-radius: 20px 20px 0 0;
+    min-height: 200px;
   }
   .loctime__time {
     border-radius: 0 0 20px 20px;
+    min-width: 365px;
   }
   .loctime__time__img {
     border-radius: 0;

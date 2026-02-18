@@ -9,7 +9,7 @@ layout: 'baseAlt.njk'
             <div class="apt__sub">
                 <div class="apt__sub__hero">
                     <div class="apt__sub__hero__img">
-                        <img src="https://res.cloudinary.com/dvoigkose/image/upload/f_auto,q_auto,w_300/v1/Personal/b0bis5b8mxu3fffugjyx" srcset="https://res.cloudinary.com/dvoigkose/image/upload/f_auto,q_auto,w_300/v1/Personal/b0bis5b8mxu3fffugjyx 300w, https://res.cloudinary.com/dvoigkose/image/upload/f_auto,q_auto,w_600/v1/Personal/b0bis5b8mxu3fffugjyx 600w, https://res.cloudinary.com/dvoigkose/image/upload/f_auto,q_auto,w_1200/v1/Personal/b0bis5b8mxu3fffugjyx 1200w" alt="calendar" width="1280" height="720">
+                        <img src="/images/hair/female07.jpg" alt="calendar" width="1280" height="720">
                     </div>
                     <div class="apt__sub__hero__txt">
                         <p>Welcome to the appointment section. In here you can book an appointment with us. To create one, You need to enter your name, phone number, email and the description of the service you want</p>
@@ -86,7 +86,7 @@ layout: 'baseAlt.njk'
                                     description: document.getElementById('workDescription').value
                                 };
                                 try {
-                                    const response = await fetch('http://localhost:3000/Appts', {
+                                    const response = await fetch('https://www.mercysalonocala.com/api/Appts', {
                                         method: 'POST',
                                         headers: { 'Content-Type': 'application/json' },
                                         body: JSON.stringify(data)

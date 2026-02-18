@@ -194,9 +194,9 @@ li {
 }
 .loctime__time__content {
   padding: 2.5rem;
+  height: 59ch;
 }
 .loctime__time__content h2 {
-  font-size: var(--size-4);
   text-align: center;
 }
 .loctime__time__content li {

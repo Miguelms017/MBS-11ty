@@ -20,42 +20,42 @@ layout: 'baseAlt.njk'
             <tr>
                 <td class="num">1</td>
                 <td class="two">Men Haircut</td>
-                <td class="three"></td>
+                <td class="three">$30 and up</td>
             </tr>
             <tr id="odd">
                 <td class="num">2</td>
                 <td>Women Haircut</td>
-                <td></td>
+                <td>$35 and up</td>
             </tr>
             <tr>
                 <td class="num">3</td>
                 <td>Color (w/. treatment and haircut)</td>
-                <td>$ 60 and Up</td>
+                <td>$70 and up</td>
             </tr>
             <tr id="odd">
                 <td class="num">4</td>
                 <td>Highlights</td>
-                <td></td>
+                <td>$80 and up</td>
             </tr>
             <tr>
                 <td class="num">5</td>
                 <td>Hair Brushing</td>
-                <td></td>
+                <td>$40 and up</td>
             </tr>
             <tr id="odd">
                 <td class="num">6</td>
                 <td>Waxing</td>
-                <td></td>
+                <td>$10 and up</td>
             </tr>
             <tr>
                 <td class="num">7</td>
                 <td>Manicure</td>
-                <td></td>
+                <td>TBD</td>
             </tr>
             <tr id="odd">
                 <td id="lastL" class="num">8</td>
                 <td>Pedicure</td>
-                <td id="lastR"></td>
+                <td id="lastR">TBD</td>
             </tr>
         </tbody></table>
     </section>

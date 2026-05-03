@@ -54,19 +54,19 @@
                                 <input type="text" name="FirstName" id="FirstName" placeholder="First Name" required="">
                             </div>
                             <div class="apt__sub__form__cnt__input">
-                                <label for="LastName">Last Name*</label>
-                                <input type="text" name="LastName" id="LastName" placeholder="Last Name" required="">
+                                <label for="LastName">Last Name</label>
+                                <input type="text" name="LastName" id="LastName" placeholder="Last Name">
                             </div>
                             <div class="apt__sub__form__cnt__input">
-                                <label for="Phone">Phone</label>
+                                <label for="Phone">Phone*</label>
                                 <input type="tel" name="Phone" id="Phone" placeholder="Phone Number" required="">
                             </div>
                             <div class="apt__sub__form__cnt__input">
-                                <label for="email">Email*</label>
-                                <input type="email" name="email" id="email" placeholder="email" required="">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" placeholder="email">
                             </div>
                             <div class="apt__sub__form__cnt__input">
-                                <label for="Time">Date and Time</label>
+                                <label for="Time">Date and Time*</label>
                                 <input type="datetime-local" name="Date" id="Time" required="">
                             </div>
                             <div class="apt__sub__form__cnt__input">
@@ -83,18 +83,18 @@
                                 </select>
                             </div>
                             <div class="apt__sub__form__cnt__input">
-                                <label for="Hairstylist">Hairstylist</label>
+                                <label for="Hairstylist">Hairstylist*</label>
                                 <select name="Hairstylist" id="Hairstylist" size="1">
                                     <option value="any">please choose an option</option>
                                     <option value="any">any</option>
-                                    <option value="Paco">Paco</option>
-                                    <option value="Maria">Maria</option>
+                                    <option value="Idania">Idania</option>
+                                    <option value="Lilian">Lilian -NAILS ONLY-</option>
                                     <option value="Mercedes">Mercedes</option>
                                 </select>
                             </div>
                             <div class="apt__sub__form__cnt__desc">
-                                <label for="workDescription">description*</label><br>
-                                <textarea name="details" id="workDescription" rows="5" cols="45" required=""></textarea>
+                                <label for="workDescription">description</label><br>
+                                <textarea name="details" id="workDescription" rows="5" cols="45"></textarea>
                             </div>
                         </div>
                         <div class="apt__sub__form__btn">
@@ -106,13 +106,13 @@
                                 e.preventDefault();
                                 const data = {
                                     Fname: document.getElementById('FirstName').value,
-                                    Lname: document.getElementById('LastName').value,
+                                    Lname: document.getElementById('LastName').value || "NoSurname",
                                     phone: document.getElementById('Phone').value,
                                     email: document.getElementById('email').value,
                                     date: document.getElementById('Time').value,
                                     hairstylist: document.getElementById('Hairstylist').value,
                                     service: document.getElementById('serviceType').value,
-                                    description: document.getElementById('workDescription').value
+                                    description: document.getElementById('workDescription').value || "Description Not Available, Please Contact Customer"
                                 };
                                 try {
                                     const response = await fetch('https://www.mercysalonocala.com/api/Appts', {
